@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Dictionary.css";
+import DictionaryData from "./DictionaryData";
+import Footer from "./Footer";
 
 export default function Dictionary() {
   let [word, setWord] = useState(null);
+  let [data, setData] = useState(null);
 
   function search(event) {
     event.preventDefault();
@@ -13,7 +16,7 @@ export default function Dictionary() {
 
   function showDefinition(response) {
     console.log(response.data[0]);
-    alert(response.data[0].meanings[0].definitions[0].definition);
+    setData(response.data[0]);
   }
 
   function updateWord(event) {
@@ -32,6 +35,12 @@ export default function Dictionary() {
           ></input>
           <button className="btn btn-dark">Search</button>
         </form>
+      </div>
+      <div className="container">
+        <DictionaryData value={data} />
+      </div>
+      <div className="mt-5 mb-3">
+        <Footer />
       </div>
     </div>
   );
