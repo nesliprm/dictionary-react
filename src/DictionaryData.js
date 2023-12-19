@@ -4,7 +4,6 @@ import Phonetics from "./Phonetics";
 import "./DictionaryData.css";
 
 export default function DictionaryData(props) {
-  console.log(props.value);
   if (props.value) {
     return (
       <div className="DictionaryData">
