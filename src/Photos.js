@@ -4,12 +4,12 @@ import "./Photos.css";
 export default function Photos(props) {
   if (props.value) {
     return (
-      <div className="Photos">
-        <div className="row">
+      <div className="Photos container">
+        <div className="photos-grid">
           {" "}
           {props.value.map(function (photo, index) {
             return (
-              <div className="col-4" key={index}>
+              <div key={index}>
                 <a href={photo.url} target="_blank" rel="noreferrer">
                   <img
                     src={photo.src.landscape}

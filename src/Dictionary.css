@@ -1,9 +1,15 @@
 .Dictionary h1 {
   color: white;
-  font-size: 58px;
-  font-family: monospace;
+  font-size: 64px;
+  font-family: Rubik Doodle Shadow;
   margin-bottom: 30px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
+
+.Dictionary .title {
+  color: white;
+  opacity: 90%;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6);
 }
 
 .Dictionary form {
@@ -21,4 +27,19 @@
 
 .Dictionary i {
   color: white;
+}
+
+@media (max-width: 960px) {
+  .Dictionary h1 {
+    font-size: 48px;
+    margin-bottom: 0px;
+  }
+
+  .Dictionary header {
+    padding: 30px 0 50px;
+  }
+
+  .Dictionary form {
+    width: 80%;
+  }
 }

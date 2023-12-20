@@ -35,7 +35,7 @@ export default function Dictionary() {
     <div className="Dictionary">
       <header>
         <h1>dictionary</h1>
-
+        <h6 className="title mb-3">Which word are we searching today?</h6>
         <form className="input-group" onSubmit={search}>
           <input
             className="form-control rounded-start-5"
@@ -55,6 +55,7 @@ export default function Dictionary() {
 
       <div className="container">
         <DictionaryData value={data} />
+
         <Photos value={photo} />
       </div>
       <div className="mt-5 mb-3">

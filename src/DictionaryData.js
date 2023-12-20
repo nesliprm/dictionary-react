@@ -1,6 +1,7 @@
 import React from "react";
 import Meaning from "./Meaning";
-import Phonetics from "./Phonetics";
+import PhoneticsAudio from "./PhoneticsAudio";
+import PhoneticsText from "./PhoneticsText";
 import "./DictionaryData.css";
 
 export default function DictionaryData(props) {
@@ -8,14 +9,21 @@ export default function DictionaryData(props) {
     return (
       <div className="DictionaryData">
         <h2>{props.value.word}</h2>
-        {props.value.phonetics.map(function (phonetic, index) {
-          return (
-            <div key={index}>
-              <Phonetics value={phonetic} />
-            </div>
-          );
-        })}
-        <br />
+        <div className="mb-4">
+          {props.value.phonetics.map(function (phonetic, index) {
+            return (
+              <div>
+                <span key={index}>
+                  <PhoneticsText value={phonetic} />
+                </span>
+                <span key={index}>
+                  <PhoneticsAudio value={phonetic} />
+                </span>
+              </div>
+            );
+          })}
+        </div>
+
         {props.value.meanings.map(function (meaning, index) {
           return (
             <div key={index}>
@@ -23,6 +31,8 @@ export default function DictionaryData(props) {
             </div>
           );
         })}
+
+        <h5 className="mt-5 border-bottom">photos of "{props.value.word}"</h5>
       </div>
     );
   } else {
