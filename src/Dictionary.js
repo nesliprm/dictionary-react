@@ -34,7 +34,7 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <header>
-        <h1>DICTIONARY</h1>
+        <h1>dictionary</h1>
 
         <form className="input-group" onSubmit={search}>
           <input
