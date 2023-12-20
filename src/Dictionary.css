@@ -29,6 +29,10 @@
   color: white;
 }
 
+.Dictionary .container {
+  max-width: 960px;
+}
+
 @media (max-width: 960px) {
   .Dictionary h1 {
     font-size: 48px;
