@@ -33,18 +33,26 @@ export default function Dictionary() {
   }
   return (
     <div className="Dictionary">
-      <div className="container">
-        <h1 className="title">DICTIONARY</h1>
-        <form className="d-flex" onSubmit={search}>
+      <header>
+        <h1>DICTIONARY</h1>
+
+        <form className="input-group" onSubmit={search}>
           <input
-            className="form-control"
+            className="form-control rounded-start-5"
             type="search"
             placeholder="Please type a word..."
             onChange={updateWord}
           ></input>
-          <button className="btn btn-dark">Search</button>
+
+          <button
+            class="input-group-append bg-dark border-dark btn rounded-end-5"
+            type="search"
+          >
+            <i class="fa fa-search"></i>
+          </button>
         </form>
-      </div>
+      </header>
+
       <div className="container">
         <DictionaryData value={data} />
         <Photos value={photo} />
