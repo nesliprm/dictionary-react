@@ -19,7 +19,7 @@ export default function Footer() {
       <small>
         Hosted on{" "}
         <a
-          href="https://gilded-lokum-c4a09c.netlify.app/"
+          href="https://dainty-seahorse-95b443.netlify.app"
           target="_blank"
           rel="noreferrer"
           class="link-dark"
