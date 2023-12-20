@@ -1,0 +1,8 @@
+.Photos {
+  margin-top: 50px;
+}
+
+.Photos img {
+  border-radius: 7px;
+  margin: 10px;
+}
