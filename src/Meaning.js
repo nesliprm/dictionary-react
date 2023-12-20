@@ -8,13 +8,15 @@ export default function Meaning(props) {
 
       {props.value.definitions.map(function (definition, index) {
         return (
-          <div className="mb-2" key={index}>
+          <div key={index}>
             <div>
               <span className="fw-bold">{index + 1}. </span>
               <span>{definition.definition}</span>
             </div>
             <div>
-              <em className="text-muted ms-3">{definition.example}</em>
+              <em className="text-muted ms-3">
+                <small>{definition.example}</small>
+              </em>
             </div>
 
             <Synonyms value={definition.synonyms} />
